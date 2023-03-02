@@ -29,7 +29,7 @@ ALLOWED_HOSTS = []
 
 # This is going to need to be changed whenever gitpod rolls over.  Annoying.
 # https://forum.djangoproject.com/t/django-admin-panel-login-403-error-csrf/12720
-CSRF_TRUSTED_ORIGINS = ['https://8000-anthonydevarti-cvdjango-l6pmgl4k7j9.ws-us89.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-anthonydevarti-cvdjango-l6pmgl4k7j9.ws-us89.gitpod.io', 'https://3000-anthonydeva-collectivev-3m6xfbx0w1b.ws-us89.gitpod.io/']
 
 
 # Application definition
@@ -49,7 +49,8 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    #probably shouldn't leave this commented out
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
