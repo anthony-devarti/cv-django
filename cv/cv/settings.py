@@ -27,7 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-CSRF_TRUSTED_ORIGINS = []
+# This is going to need to be changed whenever gitpod rolls over.  Annoying.
+# https://forum.djangoproject.com/t/django-admin-panel-login-403-error-csrf/12720
+CSRF_TRUSTED_ORIGINS = ['https://8000-anthonydevarti-cvdjango-l6pmgl4k7j9.ws-us89.gitpod.io']
 
 
 # Application definition
@@ -40,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
